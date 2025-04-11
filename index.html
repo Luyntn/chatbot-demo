@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chatbot của tôi</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <style>
-  df-messenger {
-    --df-messenger-bot-message: #e0e0e0;
-    --df-messenger-button-titlebar-color: #0b93f6;
-    --df-messenger-chat-background-color: #ffffff;
-    --df-messenger-font-color: #000000;
-    --df-messenger-user-message: #0b93f6;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-  }
-</style>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chatbot của tôi</title>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  </head>
-  <body>
-    <df-messenger
-      chat-title="MySecretBot"
-      agent-id="41b10d0b-5b9b-44df-bc0a-675f00bed9fc"
-      language-code="vi"
-      expand
-    ></df-messenger>
-  </body>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e0e0e0;
+      --df-messenger-button-titlebar-color: #0b93f6;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000000;
+      --df-messenger-user-message: #0b93f6;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <df-messenger
+    chat-title="MySecretBot"
+    agent-id="41b10d0b-5b9b-44df-bc0a-675f00bed9fc"
+    language-code="vi"
+    expand
+  ></df-messenger>
+</body>
 </html>
