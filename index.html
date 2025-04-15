@@ -20,7 +20,6 @@
       --df-messenger-button-titlebar-color: #0b93f6;
       --df-messenger-font-color: #000000;
       --df-messenger-user-message: #0b93f6;
-      --df-messenger-chat-background: url('https://top10tphcm.com/wp-content/uploads/2023/06/anh-anime-nu-cute.jpg');
 
       position: fixed;
       bottom: 0;
@@ -40,3 +39,20 @@
   ></df-messenger>
 </body>
 </html>
+<script>
+  const dfMessenger = document.querySelector('df-messenger');
+
+  dfMessenger.addEventListener('df-response-received', function (event) {
+    const response = event.detail.response;
+    if (response.queryResult && response.queryResult.fulfillmentText) {
+      const text = response.queryResult.fulfillmentText;
+      console.log("Phản hồi từ Dialogflow:", text);
+
+      // Hiển thị phản hồi trong một phần tử HTML (ví dụ: div với id="stock-price")
+      const priceDiv = document.getElementById("stock-price");
+      if (priceDiv) {
+        priceDiv.innerText = text;
+      }
+    }
+  });
+</script>
